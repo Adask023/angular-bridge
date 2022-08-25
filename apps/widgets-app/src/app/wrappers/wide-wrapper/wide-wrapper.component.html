@@ -1,1 +1,11 @@
-<p>wide-wrapper works!</p>
+<div class="widget-default-wrapper">
+  <div class="header-wrapper">
+    <h2 class="widget-header">Widget</h2>
+
+    <button class="widget-btn" (click)="onRefresh()"> <i class="fa fa-refresh" aria-hidden="true"></i></button>
+  </div>
+
+  <section>
+    <ng-content></ng-content>
+  </section>
+</div>

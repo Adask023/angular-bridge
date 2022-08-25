@@ -1,7 +1,16 @@
 <div class="widget-default-wrapper">
-  <div>Widget</div>
+  <div class="header-wrapper">
+    <h2 class="widget-header">Widget</h2>
 
-  <button (click)="onRefresh()">Refresh</button>
+    <div class="btn-wrapper">
+      <button class="widget-btn" (click)="onEnableDisable()">
+        <i class="fa-solid fa-power-off"></i>
+      </button>
+      <button class="widget-btn" (click)="onRefresh()">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
 
   <section>
     <ng-content></ng-content>

@@ -13,17 +13,39 @@ import { WIDGET } from '../widget.token';
     },
   ],
 })
-export class ServerStatusWidgetComponent implements Widget {
-  isRefreshing = false;
+export class ServerStatusWidgetComponent implements Widget, OnInit {
+  public isRefreshing: boolean = false;
+  public serverStatus: string = 'offline';
+  public enable: boolean = true;
+
+  private statusList: string[] = [
+    'online',
+    'offline',
+    'pending',
+    'cant connect',
+  ];
+
+  ngOnInit() {
+    this.load();
+  }
 
   load() {
-    console.log('Load data to server status widget');
+    this.refresh();
+  }
+
+  enableDisable() {
+    this.enable ? (this.enable = false) : (this.enable = true);
+  }
+
+  getRandomStatus(): string {
+    return this.statusList[Math.floor(Math.random() * this.statusList.length)];
   }
 
   refresh() {
     this.isRefreshing = true;
     setTimeout(() => {
       this.isRefreshing = false;
+      this.serverStatus = this.getRandomStatus();
     }, 1000);
   }
 }

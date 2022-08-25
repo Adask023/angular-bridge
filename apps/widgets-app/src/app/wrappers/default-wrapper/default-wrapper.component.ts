@@ -17,7 +17,13 @@ export class DefaultWrapperComponent implements OnInit {
   @ContentChild(WIDGET)
   widget: Widget;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.widget.load()
+  }
+
+  onEnableDisable() {
+    this.widget.enableDisable()
+  }
 
   onRefresh() {
     console.log('wrapper refresh');

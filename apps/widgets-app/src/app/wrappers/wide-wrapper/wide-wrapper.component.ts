@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, OnInit } from '@angular/core';
+import { Widget } from '../../widgets/widget.interface';
+import { WIDGET } from '../../widgets/widget.token';
 
 @Component({
   selector: 'stores-wide-wrapper',
@@ -6,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wide-wrapper.component.scss'],
 })
 export class WideWrapperComponent implements OnInit {
-  constructor() {}
+
+  constructor() {
+
+  }
+
+  @ContentChild(WIDGET)
+  widget: Widget;
 
   ngOnInit(): void {}
+
+  onRefresh() {
+    console.log('wrapper refresh');
+    this.widget.refresh();
+  }
 }

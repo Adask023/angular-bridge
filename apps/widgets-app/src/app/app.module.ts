@@ -6,6 +6,8 @@ import { DefaultWrapperComponent } from './wrappers/default-wrapper/default-wrap
 import { WideWrapperComponent } from './wrappers/wide-wrapper/wide-wrapper.component';
 import { WeatherWidgetComponent } from './widgets/weather-widget/weather-widget.component';
 import { ServerStatusWidgetComponent } from './widgets/server-status-widget/server-status-widget.component';
+import { ApiHttpService } from './services/api-http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,8 @@ import { ServerStatusWidgetComponent } from './widgets/server-status-widget/serv
     WeatherWidgetComponent,
     ServerStatusWidgetComponent,
   ],
-  imports: [BrowserModule],
-  providers: [],
+  imports: [BrowserModule, HttpClientModule],
+  providers: [ApiHttpService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

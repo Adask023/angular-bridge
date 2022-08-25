@@ -1,8 +1,20 @@
 <div class="app-wrapper">
-  <stores-default-wrapper>
-    <stores-server-status-widget></stores-server-status-widget>
-  </stores-default-wrapper>
-  <stores-default-wrapper>
-    <stores-weather-widget></stores-weather-widget>
-  </stores-default-wrapper>
+  <div class="widgets-wrapper">
+    <!-- <stores-default-wrapper>
+      <stores-server-status-widget></stores-server-status-widget>
+    </stores-default-wrapper> -->
+    <stores-default-wrapper>
+      <stores-weather-widget
+        [cityName]="'bielsko-biala'"
+      ></stores-weather-widget>
+    </stores-default-wrapper>
+
+    <stores-wide-wrapper>
+      <stores-weather-widget [cityName]="'warszawa'"></stores-weather-widget>
+    </stores-wide-wrapper>
+
+    <stores-default-wrapper>
+      <stores-server-status-widget></stores-server-status-widget>
+    </stores-default-wrapper>
+  </div>
 </div>

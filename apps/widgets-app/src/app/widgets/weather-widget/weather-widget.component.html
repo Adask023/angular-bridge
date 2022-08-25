@@ -1,7 +1,10 @@
-
 <div *ngIf="isRefreshing">LOADING</div>
 
-<div>
-    <h5>weather</h5>
-    <section>Clear sky</section>
+<div *ngIf="enable === true" class="widget">
+  <p class="widget-header">{{ cityName | uppercase }}</p>
+
+  <section>
+    <p class="widget-desc">{{ cityInfo?.weather[0].description }}</p>
+    <p class="widget-temp">{{ cityInfo?.main.temp }}&deg;C</p>
+  </section>
 </div>
