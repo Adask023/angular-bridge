@@ -1,6 +1,7 @@
 <div *ngIf="isRefreshing">LOADING</div>
 
-<div>
+<div class="widget">
+  <div *ngIf="enable === false" class="disable">server off</div>
   <h5>server status</h5>
   <section>{{ serverStatus }}</section>
 </div>

@@ -1,6 +1,8 @@
 <div *ngIf="isRefreshing">LOADING</div>
 
-<div *ngIf="enable === true" class="widget">
+
+<div class="widget">
+  <div *ngIf="enable === false" class="disable">disable</div>
   <p class="widget-header">{{ cityName | uppercase }}</p>
 
   <section>
