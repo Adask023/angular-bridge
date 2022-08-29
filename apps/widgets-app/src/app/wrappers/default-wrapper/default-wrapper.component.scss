@@ -1,22 +1,29 @@
 .widget-default-wrapper {
   padding: 20px;
   width: 200px;
-  height: 200px;
+  min-height: 250px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin: 20px;
+  border-radius: 15px;
+  background-color: #D4F1F4;
+  color: #05445E;
+
   .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #189AB4;
     padding: 5px 5px;
     .widget-header {
+
+
     }
     .btn-wrapper {
+      
       .widget-btn {
         border: none;
         text-decoration: none;
-        background-color: #fff;
+        background-color: #D4F1F4;
         cursor: pointer;
         transition: 0.2s;
         padding: 5px;
@@ -28,5 +35,8 @@
         }
       }
     }
+  }
+  .widget-content {
+    padding-top: 8px;
   }
 }

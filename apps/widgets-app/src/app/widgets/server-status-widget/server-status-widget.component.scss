@@ -1,9 +1,12 @@
+.widget {
+  position: relative;
+}
 
-
-.disable {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    background-color: #fff;
-  }
+.disable,
+.refresh {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #D4F1F4;
+}

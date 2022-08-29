@@ -1,12 +1,22 @@
-<div *ngIf="isRefreshing">LOADING</div>
-
-
 <div class="widget">
   <div *ngIf="enable === false" class="disable">disable</div>
-  <p class="widget-header">{{ cityName | uppercase }}</p>
+  <div *ngIf="isRefreshing" class="refresh">LOADING</div>
+
+  <h5>{{ cityName | uppercase }}</h5>
 
   <section>
     <p class="widget-desc">{{ cityInfo?.weather[0].description }}</p>
+
+    <div class="widget-img-wrapper">
+      <img
+        src="http://openweathermap.org/img/wn/{{
+          cityInfo?.weather[0].icon
+        }}@2x.png"
+        alt=""
+        height="60"
+        width="60"
+      />
+    </div>
     <p class="widget-temp">{{ cityInfo?.main.temp }}&deg;C</p>
   </section>
 </div>
